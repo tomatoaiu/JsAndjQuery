@@ -5,6 +5,10 @@ jquery v3.3.1
 <div id="me"></div>
 ```
 ```js
+const js = document.getElementById("me");
+console.log(js);
+// <div id="me"></div>
+
 const js = document.querySelectorAll("#me");
 console.log(js);
 // NodeList [div#me]
