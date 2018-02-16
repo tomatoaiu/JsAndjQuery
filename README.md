@@ -95,3 +95,21 @@ jquery.html(`<p>replace</p>`);
 </div>
 */
 ```
+
+## click
+```html
+<div id="me"></div>
+```
+```js
+const js = document.querySelectorAll("#me")[0];
+js.addEventListener('click', (() => {
+    console.log("click");
+}), false);
+// click
+
+const jquery = $("#me");
+jquery.on('click', (() => {
+    console.log("click");
+}));
+// click
+```
