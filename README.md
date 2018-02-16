@@ -27,6 +27,35 @@ console.log(jquery);
 // jQuery.fn.init(2) [div.me, div.me, prevObject: jQuery.fn.init(1)]
 ```
 
+## add class
+### want to
+```html
+<div id="me"></div>
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+<div id="me" class="my mine"></div>
+```
+```html
+<div id="me"></div>
+```
+```js
+const js = document.querySelectorAll("#me")[0];
+js.className += "my mime";
+
+const js = document.querySelectorAll("#me")[0];
+js.classList.add("my");
+js.classList.add("mine");
+
+const js = document.querySelectorAll("#me")[0];
+js.classList.add("my", "mine");
+
+const jquery = $("#me");
+jquery.addClass("my");
+jquery.addClass("mine");
+
+const jquery = $("#me");
+jquery.addClass("my mine");
+```
+
 ## append
 ### want to
 ```html
