@@ -22,6 +22,10 @@ console.log(jquery);
 <div class="me"></div>
 ```
 ```js
+const js = document.getElementsByClassName("me");
+console.log(js);
+// HTMLCollection(2) [div.me, div.me]
+
 const js = document.querySelectorAll(".me");
 console.log(js);
 // NodeList(2) [div.me, div.me]
