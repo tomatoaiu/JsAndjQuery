@@ -134,6 +134,33 @@ jquery.html(`<p>replace</p>`);
 */
 ```
 
+## remove children
+### want to
+```html
+<div id="me">
+    <b>Hello</b>
+    <b>Hello</b>
+</div>
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+<div id="me"></div>
+```
+### test
+```html
+<div id="me">
+    <b>Hello</b>
+    <b>Hello</b>
+</div>
+```
+```js
+const js = document.querySelectorAll("#me")[0];
+while(js.firstChild){
+    js.removeChild(js.firstChild);
+}
+
+const jquery = $("#me");
+jquery.empty();
+```
+
 ## click
 ```html
 <div id="me"></div>
