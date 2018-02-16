@@ -161,6 +161,29 @@ const jquery = $("#me");
 jquery.empty();
 ```
 
+## remove self
+### want to
+```html
+<div id="me">
+    <b>Hello</b>
+</div>
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+```
+### test
+```html
+<div id="me">
+    <b>Hello</b>
+</div>
+```
+```js
+const js = document.querySelectorAll("#me")[0];
+js.remove();
+
+const jquery = $("#me");
+jquery.remove();
+```
+
 ## click
 ```html
 <div id="me"></div>
