@@ -26,3 +26,37 @@ const jquery = $(".me");
 console.log(jquery);
 // jQuery.fn.init(2) [div.me, div.me, prevObject: jQuery.fn.init(1)]
 ```
+
+## append
+### want to
+```html
+<div id="me"></div>
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+<div id="me">
+    <b>Hello</b>
+</div>
+```
+### test
+```html
+<div id="me"></div>
+```
+```js
+const js = document.querySelectorAll("#me")[0];
+const b = document.createElement("b");
+var bContent = document.createTextNode("Hello");
+b.appendChild(bContent);
+js.appendChild(b);
+/*
+<div id="me">
+    <b>Hello</b>
+</div>
+*/
+
+const jquery = $("#me");
+jquery.append("<b>Hello</b>");
+/*
+<div id="me">
+    <b>Hello</b>
+</div>
+*/
+```
