@@ -60,3 +60,38 @@ jquery.append("<b>Hello</b>");
 </div>
 */
 ```
+
+## replace child html
+### want to
+```html
+<div id="me">
+    <b>Hello</b>
+</div>
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+<div id="me">
+    <p>replace</p>
+</div>
+```
+### test
+```html
+<div id="me">
+    <b>Hello</b>
+</div>
+```
+```js
+const js = document.querySelectorAll("#me")[0];
+js.innerHTML = `<p>replace</p>`;
+/*
+<div id="me">
+    <p>replace</p>
+</div>
+*/
+
+const jquery = $("#me");
+jquery.html(`<p>replace</p>`);
+/*
+<div id="me">
+    <p>replace</p>
+</div>
+*/
+```
